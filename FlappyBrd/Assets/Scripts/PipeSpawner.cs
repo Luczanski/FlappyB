@@ -7,12 +7,11 @@ public class PipeSpawner : MonoBehaviour
     public float repeatRate = 1;
     public float repeatRateCoin = 0;
     private float timer = 0;
-    private float timerCoin = 0;
     public float height = 5;
     public float width = 1;
     public GameObject prefabPipe;
     public GameObject prefabPipeRed;
-    public GameObject prefabCoinn;
+    
   
 
     // Update is called once per frame
