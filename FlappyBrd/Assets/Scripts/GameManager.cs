@@ -8,7 +8,12 @@ public class GameManager : Singleton<GameManager>
 {
     public GameObject loseUI;
     public int points = 0;
+    public int coins = 0;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI CoinsText;
+   
+
+
 
     public void StartGame()
     {
@@ -35,5 +40,11 @@ public class GameManager : Singleton<GameManager>
     {
         points++;
         scoreText.text = points.ToString();
+    }
+    public void UpdateCoin()
+    {
+        
+        coins++;
+        CoinsText.text = points.ToString();
     }
 }
