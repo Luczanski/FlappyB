@@ -11,8 +11,9 @@ public class AddScore : MonoBehaviour
     {
         GameManager.Instance.UpdateScore();
         GameManager.Instance.BestScore();
-     
        
+        GameManager.Instance.PointS();
+
     }
 
   

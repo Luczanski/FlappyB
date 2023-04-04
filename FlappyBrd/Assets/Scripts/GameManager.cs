@@ -15,7 +15,8 @@ public class GameManager : Singleton<GameManager>
     public TextMeshProUGUI Coins;
     public TextMeshProUGUI bScore;
 
-    
+     AudioSource pointSound; 
+      
 
 
 
@@ -36,6 +37,14 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = 1;
         
         SceneManager.LoadScene("Game");
+        
+    }
+    public void Settings()
+    {
+        Time.timeScale = 1;
+        
+        SceneManager.LoadScene("Menu");
+        
     }
     public void OnGameOver()
     {
@@ -79,5 +88,12 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         bScore.text = PlayerPrefs.GetInt("Save").ToString();
+        pointSound = GetComponent<AudioSource>();
+        
     }
+
+    public void PointS()
+    {
+        pointSound.Play();
+    } 
 }

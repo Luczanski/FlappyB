@@ -6,12 +6,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float strength = 1;
+    AudioSource wingSound;
 
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        wingSound = GetComponent<AudioSource>();
+        wingSound.Play();
     }
 
     // Update is called once per frame
@@ -27,5 +30,6 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col)
     {
         GameManager.Instance.OnGameOver();
+        wingSound.Pause();
     }
 }
